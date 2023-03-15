@@ -1,0 +1,196 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.header {
+  text-align: center;
+  font-size: 42px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  text-shadow: 3px 3px #fff;
+}
+
+.chars-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.char-text {
+  position: relative;
+}
+
+.char-name {
+  padding: 15px;
+}
+
+body {
+  background: #fec356;
+  font-family: "Mynerve", cursive;
+}
+
+.search-restore-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  background-color: #fff;
+  border-radius: 5px 5px;
+  height: 40px;
+  width: 300px;
+  padding: 16.5px 14px;
+  padding-left: 5px;
+  border-color: #000000;
+  margin-right: 100px;
+  margin-bottom: 20px;
+  border-width: 0.1em;
+  font-size: 16px;
+}
+
+::placeholder {
+  color: #000000;
+  opacity: 0.4;
+  font-family: "Mynerve", cursive;
+  padding: 5px;
+}
+
+img {
+  width: 130px;
+}
+
+.new-state-btn {
+  background-color: #7b68ee;
+  color: #000;
+  font-family: "Mynerve", cursive;
+  border: 1px solid;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  width: 100px;
+  height: 40px;
+  transition: ease-out 0.3s;
+  outline: none;
+  cursor: pointer;
+}
+
+.new-state-btn:hover,
+.like-btn:hover,
+.dislike-btn:hover {
+  background-color: #7b68ee;
+  color: #fff;
+  border: 1px solid;
+  transform: scale(1.06);
+  transition: 0.2s ease-in-out;
+}
+
+.like-icon,
+.dislike-icon {
+  cursor: pointer;
+  color: #000000;
+  color: #fff;
+}
+
+.like-btn {
+  width: 60px;
+  height: 22px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #7b68ee;
+  color: #000;
+  border: 1px solid;
+  font-family: "Mynerve", cursive;
+  border-radius: 5px;
+}
+
+.like-btn-container {
+  display: inline-flex;
+}
+
+.like-btn {
+  margin-left: 415px;
+}
+
+.character {
+  background: #fec356;
+  border: 1px solid;
+  padding: 15px;
+  margin: 25px;
+  border-radius: 18px;
+  width: 520px;
+  height: 330px;
+  border-width: thin;
+  border-color: #000000;
+  box-shadow: -1rem 0 2rem #000;
+  transition: 0.2s;
+  font-size: 20px;
+}
+
+.char-quote {
+  text-align: right;
+}
+
+.chars-result-text {
+  font-size: 20px;
+  text-align: center;
+}
+
+.character:hover {
+  box-shadow: 0 4px 6px 0 #333;
+  transform: scale(1.01);
+  transition: 0.2s ease-in-out;
+}
+
+.delete-char {
+  border: none;
+  transition: ease-out 0.3s;
+  outline: none;
+  text-shadow: none;
+  font-size: 26px;
+  cursor: pointer;
+  background: #fec356;
+  font-family: "Mynerve", cursive;
+}
+
+.delete-char:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .search-input {
+    margin-right: 10px;
+  }
+  .character {
+    height: fit-content;
+  }
+}
+
+@media (max-width: 414px) {
+  .search-input {
+    margin-right: 10px;
+    height: 50px;
+  }
+  .new-state-btn {
+    height: 50px;
+  }
+  .flex-container {
+    flex-direction: column;
+  }
+  .character {
+    height: fit-content;
+  }
+}
